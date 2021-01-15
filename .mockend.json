@@ -2,26 +2,23 @@
     "User": {
      "id": "int",
      "name": "string",
-     "child": "Post[]"
-    },
-    "Post": {
-      "id": "int",
-      "userId":"int",
-      "title": "string",
-      "views": "int",
-      "published": "boolean",
-      "createdAt": "date",
-      "commentsCount": "int",
-      "child": "Comment[]"
-    },
-    "Comment": {
-      "postId": "int",
-      "body": "string",
-      "post": "Post",
-      "child": "Like"
-    },
-    "Like":{
-      "commentId": "int",
-      "count": "int"
+     "child": {
+          "id": "int",
+          "userId":"int",
+          "title": "string",
+          "views": "int",
+          "published": "boolean",
+          "createdAt": "date",
+          "commentsCount": "int",
+          "child": {
+              "postId": "int",
+              "body": "string",
+              "post": "Post",
+              "child": {
+                  "commentId": "int",
+                  "count": "int"
+                }
+            }
+        }
     }
 }
