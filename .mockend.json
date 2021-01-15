@@ -1,5 +1,4 @@
 {
-  "Social": {
     "User": {
      "id": "int",
      "name": "string",
@@ -25,5 +24,4 @@
       "commentId": "int",
       "count": "int"
     }
-  }  
 }
