@@ -18,7 +18,7 @@
       "postId": "int",
       "body": "string",
       "post": "Post",
-      "child": "Like[]"
+      "child": "Like"
     },
     "Like":{
       "commentId": "int",
