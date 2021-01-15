@@ -1,19 +1,27 @@
 {
   "User": {
    "id": "int",
-    "name": "string"
+   "name": "string",
+   "child": "Post[]"
   },
   "Post": {
+    "id": "int",
+    "userId":"int",
     "title": "string",
     "views": "int",
     "published": "boolean",
     "createdAt": "date",
     "commentsCount": "int",
-    "comments": "Comment[]"
+    "child": "Comment[]"
   },
   "Comment": {
     "postId": "int",
     "body": "string",
-    "post": "Post"
+    "post": "Post",
+    "child": "Like[]"
+  },
+  "Like":{
+    "commentId": "int",
+    "count": "int"
   }
 }
