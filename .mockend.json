@@ -15,7 +15,7 @@
       "type": "belongsTo",
       "model": "User",
       "foreignKey": "",
-      "primaryKey": "id"
+      "primaryKey": "id",
       "child": "Comment[]"
     },
     "Comment": {
