@@ -1,23 +1,19 @@
 {
-    "User": {
-     "id": "int",
-     "name": "string",
-     "child": {
-          "id": "int",
-          "userId":"int",
-          "title": "string",
-          "views": "int",
-          "published": "boolean",
-          "createdAt": "date",
-          "commentsCount": "int",
+ "Post": {
+      "id": "int",
+      "userId":"int",
+      "title": "string",
+      "views": "int",
+      "published": "boolean",
+      "createdAt": "date",
+      "commentsCount": "int",
+      "child": {
+          "postId": "int",
+          "body": "string",
+          "post": "Post",
           "child": {
-              "postId": "int",
-              "body": "string",
-              "post": "Post",
-              "child": {
-                  "commentId": "int",
-                  "count": "int"
-                }
+              "commentId": "int",
+              "count": "int"
             }
         }
     }
