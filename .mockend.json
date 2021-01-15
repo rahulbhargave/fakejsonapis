@@ -2,17 +2,17 @@
   "User": {
    "id": "int",
     "name": "string"
-  }
+  },
   "Post": {
     "title": "string",
     "views": "int",
     "published": "boolean",
     "createdAt": "date",
-    "commentsCount": "int"
+    "commentsCount": "int",
     "comments": "Comment[]"
   },
   "Comment": {
-    "postId": "int"
+    "postId": "int",
     "body": "string",
     "post": "Post"
   }
