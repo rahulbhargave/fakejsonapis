@@ -1,5 +1,10 @@
 {
- "Post": {
+    "User": {
+     "id": "int",
+     "name": "string",
+     "child": "Post[]"
+    },
+    "Post": {
       "id": "int",
       "userId":"int",
       "title": "string",
@@ -7,14 +12,20 @@
       "published": "boolean",
       "createdAt": "date",
       "commentsCount": "int",
-      "child": {
-          "postId": "int",
-          "body": "string",
-          "post": "Post",
-          "child": {
-              "commentId": "int",
-              "count": "int"
-            }
-        }
+      "type": "belongsTo",
+      "model": "User",
+      "foreignKey": "",
+      "primaryKey": "id"
+      "child": "Comment[]"
+    },
+    "Comment": {
+      "postId": "int",
+      "body": "string",
+      "post": "Post",
+      "child": "Like"
+    },
+    "Like":{
+      "commentId": "int",
+      "count": "int"
     }
 }
